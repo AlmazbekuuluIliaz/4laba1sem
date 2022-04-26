@@ -20,10 +20,12 @@ header {
   padding-top: 35px;
 }
 
-.nav-top-list {
-  display: flex;
-  justify-content: right;
-  gap: 12px;
+.nav-top {
+  text-align: right;
+}
+.nav-top__item {
+  display: inline;
+  margin-left: 15px;
 }
 .nav-top__item {
   font-family: "Roboto regular";
@@ -33,26 +35,23 @@ header {
   line-height: 18px;
   color: #17494d;
 }
+.nav-bottom {
+  float: right;
+}
 .nav-bottom-list {
   margin-top: 29px;
-  display: flex;
-  justify-content: right;
-  gap: 51px;
 }
-.header-bottom {
-  display: flex;
-  justify-content: space-between;
+.nav-bottom__item {
+  display: inline;
+  margin-left: 20px;
 }
 .customer-service {
   background-color: #17494d;
 }
 .customer-service .container {
-  display: flex;
-  justify-content: space-between;
   position: relative;
   padding: 91px 0 162px 0;
 }
-
 .customer-service__title {
   font-family: "Roboto bold";
   font-style: normal;
@@ -62,8 +61,12 @@ header {
   max-width: 535px;
   color: #ffffff;
 }
+
 .customer-service-try {
   padding: 40px 40px 0px 16px;
+  position: absolute;
+  right: 0;
+  top: 150px;
 }
 .customer-service-try__title {
   max-width: 420px;
@@ -76,7 +79,6 @@ header {
   margin-bottom: 30px;
 }
 .customer-service-links {
-  display: flex;
   gap: 25px;
 }
 .customer-service__link {
@@ -106,12 +108,14 @@ header {
   padding: 20px 0;
 }
 .message .container {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 .message-details {
   max-width: 458px;
   padding: 8px 100px 0 8px;
+  position: absolute;
+  right: 0;
+  top: 50px;
 }
 .message__title {
   font-family: "Roboto bold";
@@ -132,8 +136,6 @@ header {
   margin-bottom: 39px;
 }
 .card-links {
-  display: flex;
-  gap: 12px;
   font-family: "Roboto bold";
   font-style: normal;
   font-weight: 700;
@@ -143,9 +145,12 @@ header {
 }
 .card__link {
   border-bottom: 1px solid #03363d;
+  margin-left: 10px;
 }
 .experience {
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 300px;
+  position: relative;
 }
 .experience__title {
   font-family: "Roboto bold";
@@ -175,8 +180,7 @@ header {
   max-width: 602px;
 }
 .experience__links {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   gap: 12px;
   margin-bottom: 27px;
 }
@@ -190,6 +194,7 @@ header {
   text-transform: uppercase;
   color: #03363d;
   border-bottom: 1px solid #17494d;
+  margin-left: 10px;
 }
 .experience__link_disactive {
   font-family: "Roboto regular";
@@ -198,9 +203,10 @@ header {
   color: #68737d;
   border: none;
 }
-.experience-bottom {
-  display: flex;
-  justify-content: space-between;
+.experience-right {
+  position: absolute;
+  right: 230px;
+  top: 355px;
 }
 .experience-bottom__title {
   font-family: "Roboto bold";
@@ -297,14 +303,14 @@ header {
   padding: 62px 0;
 }
 .cards {
-  display: flex;
-  justify-content: center;
   gap: 16px;
   margin-bottom: 64px;
 }
 .card {
   padding: 32px 35px 44px 26px;
   background: #f8f9f9;
+  width: 300px;
+  display: inline-block;
 }
 .card:nth-child(1) {
   border-bottom: 2px solid #7d3d54;
@@ -369,10 +375,15 @@ header {
 .partners {
   background: #f8f9f9;
   padding-top: 90px;
+  padding-bottom: 400px;
 }
 .partners .container {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+.partners-right {
+  position: absolute;
+  top: 0px;
+  right: 0;
 }
 .partners__link {
   float: left;
@@ -398,6 +409,9 @@ header {
 }
 .partners__company {
   margin-bottom: 36px;
+  position: absolute;
+  left: 0;
+  bottom: -247px;
 }
 .partners__link {
   font-family: "Roboto regular";
@@ -410,31 +424,38 @@ header {
 }
 .more {
   padding-top: 94px;
-  padding-bottom: 20px;
+  padding-bottom: 250px;
 }
 
 .more-wrapper {
-  display: flex;
-  justify-content: space-between;
   border-top: 1px solid #c2c8cc;
   padding-top: 94px;
+  position: relative;
 }
 .more__title {
   font-family: "Roboto bold";
+
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   color: #03363d;
-  max-width: 300px;
+  width: 300px;
 }
 .more-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  list-style-position: inside;
+  column-count: 2;
+  list-style-type: decimal;
+
   gap: 14px;
+  position: absolute;
+  right: 0;
+  top: 100px;
 }
 .more__item {
   font-family: "Roboto regular";
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -458,9 +479,8 @@ header {
   margin-bottom: 48px;
 }
 .free-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
+  margin: 0 auto;
+  width: fit-content;
 }
 .free-link {
   padding: 14px 26px;
@@ -483,8 +503,7 @@ header {
   padding-top: 95px;
 }
 .top-footer .container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  column-count: 6;
   border-bottom: 1px solid #000;
 }
 
@@ -497,6 +516,9 @@ header {
   line-height: 32px;
   color: #03363d;
   max-width: 127px;
+}
+.footer-column {
+  height: 380px;
 }
 .column__title {
   font-family: "Roboto";
@@ -524,7 +546,6 @@ header {
   padding: 25px 0;
 }
 .search {
-  display: flex;
   margin-bottom: 16px;
 }
 .titles {
@@ -569,11 +590,9 @@ header {
   padding: 0 20px;
   color: hsl(0, 0%, 100%);
 }
-.row {
-  display: flex;
-  gap: 17px;
-}
+
 .row__item {
+  display: inline;
   font-family: "Roboto regular";
   font-style: normal;
   font-weight: 400;
